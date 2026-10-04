@@ -1,0 +1,17 @@
+{
+  "native_report_rebuilt": true,
+  "change": "Explicit aspect-preserving figure dimensions; results added to Markdown export; no simulation changes",
+  "completed": "04-Oct-2026 09:25:06",
+  "source_sha256_lf": "f068a73a9958fd2eaa465504c708aa1369e69dc65612ec7324b5cb76a649a0ea",
+  "pdf_pages": 13,
+  "all_pages_visually_checked": true,
+  "charts_preserve_aspect_ratio": true,
+  "no_clipped_charts": true,
+  "video_verified": {
+    "duration_s": 30,
+    "fps": 10,
+    "width": 1250,
+    "height": 730,
+    "sample_frame_s": 15
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_commit": "d0c320fc735a66bdc0a5adb15e703829d5c26871",
+  "clone_type": "Fresh local Git clone of the revision branch, no hard links",
+  "pregenerated_results_removed": true,
+  "entrypoints": "start_project.m followed by run_project",
+  "pipeline_steps": 14,
+  "wall_seconds": 2913.2405497,
+  "matlab_release": "2026a",
+  "completed": "03-Oct-2026 16:39:29"
+}

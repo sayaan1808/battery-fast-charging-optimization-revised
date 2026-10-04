@@ -1,0 +1,93 @@
+{
+  "parse_issues": [],
+  "matlab_release": "2026a",
+  "all_comparison_targets_reached": true,
+  "all_comparison_feasible": true,
+  "convergence_time_under_1percent": true,
+  "convergence_voltage_under_10mV": true,
+  "coulomb_counting": [
+    {
+      "case": "CCCV_baseline",
+      "delivered_Ah": 3.0012885060738204,
+      "soc_equivalent_Ah": 3.0012757273191051,
+      "absolute_error_Ah": 1.2778754715281337E-5
+    },
+    {
+      "case": "two_stage",
+      "delivered_Ah": 3.0014074849298904,
+      "soc_equivalent_Ah": 3.00139202683349,
+      "absolute_error_Ah": 1.545809640024487E-5
+    },
+    {
+      "case": "three_stage",
+      "delivered_Ah": 3.0014486252589521,
+      "soc_equivalent_Ah": 3.0014188475352652,
+      "absolute_error_Ah": 2.9777723686841284E-5
+    },
+    {
+      "case": "four_stage",
+      "delivered_Ah": 3.001323671164279,
+      "soc_equivalent_Ah": 3.0013005633311796,
+      "absolute_error_Ah": 2.3107833099444974E-5
+    },
+    {
+      "case": "adaptive",
+      "delivered_Ah": 3.0013910250849762,
+      "soc_equivalent_Ah": 3.0013276187166449,
+      "absolute_error_Ah": 6.3406368331353491E-5
+    },
+    {
+      "case": "optimized",
+      "delivered_Ah": 3.0013910250849762,
+      "soc_equivalent_Ah": 3.0013276187166449,
+      "absolute_error_Ah": 6.3406368331353491E-5
+    },
+    {
+      "case": "collocation_replay",
+      "delivered_Ah": 3.0013865180322354,
+      "soc_equivalent_Ah": 3.0013352659464552,
+      "absolute_error_Ah": 5.1252085780273404E-5
+    },
+    {
+      "case": "rl_replay",
+      "delivered_Ah": 3.00156570625995,
+      "soc_equivalent_Ah": 3.0015042697014049,
+      "absolute_error_Ah": 6.1436558544958331E-5
+    },
+    {
+      "case": "high_soc_CCCV",
+      "delivered_Ah": 3.900435427427297,
+      "soc_equivalent_Ah": 3.90038307068602,
+      "absolute_error_Ah": 5.2356741277126417E-5
+    },
+    {
+      "case": "refined",
+      "delivered_Ah": 3.0013132477932585,
+      "soc_equivalent_Ah": 3.0013080113587254,
+      "absolute_error_Ah": 5.2364345330957462E-6
+    }
+  ],
+  "initial_states_match": true,
+  "solid_surface_below_98percent": true,
+  "coulomb_error_under_1mAh": true,
+  "robustness_runs": 18,
+  "all_robustness_feasible": true,
+  "all_validation_windows_complete": true,
+  "experimental_voltage_RMSE_mV": [
+    30.6485184778324,
+    39.8469324044299,
+    39.7921815824514,
+    91.4704211547094
+  ],
+  "experimental_temperature_RMSE_C": [
+    0.756813555817095,
+    1.77838174190841,
+    2.27265246553493,
+    2.83814962636883
+  ],
+  "aging_cycle_rows": 12,
+  "aging_proxy_in_0_to_1": true,
+  "protection_regressions_pass": true,
+  "model_has_no_root": true,
+  "technical_checks_pass": true
+}

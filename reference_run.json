@@ -1,0 +1,7 @@
+{
+  "executed": true,
+  "pybamm_version": "26.8.0.0",
+  "created_utc": "2026-10-03T15:44:28.929390+00:00",
+  "scope": "Independent SPMe and different CV/protection implementation; not a Simscape replay",
+  "raw_or_processed_data_modified": false
+}

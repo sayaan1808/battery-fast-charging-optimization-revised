@@ -1,0 +1,17 @@
+{
+  "portable_workspace": true,
+  "foundation_thermal_resistances": true,
+  "external_clamp": true,
+  "external_CV_protected": true,
+  "external_CV_peak_V": 4.195738012412102,
+  "fault_ramps_to_zero": true,
+  "fault_terminal_current_A": 0.0086751365464598634,
+  "completion_settles": true,
+  "initial_enabled_SEI_m": 5E-9,
+  "inactive_aging_missing": true,
+  "unequal_layer_counts": true,
+  "anode_parameter_live": true,
+  "electrolyte_derate": true,
+  "passed": true,
+  "executed_at": "03-Oct-2026 15:51:26"
+}

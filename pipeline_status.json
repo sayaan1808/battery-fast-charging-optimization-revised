@@ -1,0 +1,86 @@
+[
+  {
+    "step": "model_build",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 5.1828115
+  },
+  {
+    "step": "protection_regressions",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 25.1845122
+  },
+  {
+    "step": "native_battery_diagnostics",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 8.6943034
+  },
+  {
+    "step": "charging_comparison",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 70.4675619
+  },
+  {
+    "step": "simscape_optimization",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 186.4885561
+  },
+  {
+    "step": "SDO_experimental_validation",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 818.1219604
+  },
+  {
+    "step": "direct_collocation",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 2.0713589
+  },
+  {
+    "step": "RL_full_plant",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 1386.0498852
+  },
+  {
+    "step": "parallel_robustness_and_refinement",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 104.9725843
+  },
+  {
+    "step": "aging",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 53.453852
+  },
+  {
+    "step": "charge_validation_and_sensitivity",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 29.6914936
+  },
+  {
+    "step": "final_checks",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 8.6572154
+  },
+  {
+    "step": "native_report",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 15.0021543
+  },
+  {
+    "step": "recorded_trace_demo",
+    "executed": true,
+    "error": "",
+    "wall_seconds": 198.9911155
+  }
+]
