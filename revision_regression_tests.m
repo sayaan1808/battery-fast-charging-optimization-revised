@@ -1,0 +1,48 @@
+function checks=revision_regression_tests()
+p=project_parameters();model='BatteryFastCharging';checks=struct;
+stored=evalin(get_param(model,'ModelWorkspace'),'p');
+assert(~isfield(stored,'root'),'Machine-specific path stored in model.');
+checks.portable_workspace=true;
+assert(contains(get_param([model '/CoreToSurface'],'ReferenceBlock'),'Thermal Resistance'));
+assert(contains(get_param([model '/SurfaceToAmbient'],'ReferenceBlock'),'Thermal Resistance'));
+checks.foundation_thermal_resistances=true;
+q=p;q.Duration=60;q.UseExternalCurrent=1;q.InputCurrent=[0 50;60 50];
+[m,t]=run_case(q,'regression_external_clamp');
+assert(max(t.command_current_A)<=p.Imax+1e-9 && max(t.current_charge_A)<=p.Imax+.001);
+assert(all(t.characterization_replay==0));checks.external_clamp=true;
+q=p;q.SOC0=.7;q.SOCtarget=.98;q.UseExternalCurrent=1;
+q.InputCurrent=[0 5;q.Duration 5];
+[m,t]=run_case(q,'regression_external_CV');
+assert(m.target_reached && ~m.fault && max(t.voltage_V)<=p.Vmax);
+checks.external_CV_protected=true;checks.external_CV_peak_V=max(t.voltage_V);
+q=p;q.Duration=60;q.CharacterizationReplay=true;q.StopOnTarget=false;
+q.UseExternalCurrent=1;q.InputCurrent=[0 50;60 50];q.DiagnosticVmax=3.52;
+[m,t]=run_case(q,'regression_fault_settling');event=find(t.fault>0,1);
+assert(m.fault && m.termination_reason==2 && ~m.target_reached);
+assert(t.time_s(end)>t.time_s(event)+p.ShutdownMinTime && abs(t.current_charge_A(end))<=p.ShutdownCurrentTolerance+.001);
+assert(t.current_charge_A(event)>.1 && all(t.command_current_A(event:end)==0));
+checks.fault_ramps_to_zero=true;checks.fault_terminal_current_A=t.current_charge_A(end);
+q=p;q.SOCtarget=.201;q.Duration=90;
+[m,t]=run_case(q,'regression_completion');
+assert(m.target_reached && m.termination_reason==1 && ~m.fault && abs(m.terminal_current_A)<=p.ShutdownCurrentTolerance+.001);
+checks.completion_settles=true;
+q=p;q.Duration=10;q.EnableAging=true;
+[~,t]=run_case(q,'regression_aging');assert(abs(t.sei_m(1)-5e-9)<1e-12);
+checks.initial_enabled_SEI_m=t.sei_m(1);
+q.EnableAging=false;[~,t]=run_case(q,'regression_inactive_aging');
+assert(all(isnan(t.sei_m)) && all(isnan(t.irreversible_plating_mol)));
+checks.inactive_aging_missing=true;
+q=p;q.Duration=10;q.LayersAnode=8;q.LayersSeparator=10;q.LayersCathode=14;
+run_case(q,'regression_unequal_layers');checks.unequal_layer_counts=true;
+% Test the named physical floor and proportional electrolyte limiter directly.
+clear supervisor_step;
+[a,~,~,~,~,~,d]=supervisor_step(.2,298.15,3.5,.03,1000,0,[7.5 7.5 7.5 7.5],p.SOCswitch,0,0,0,p);
+q=p;q.AnodePotentialMin=.025;clear supervisor_step;
+[b,~,~,~,~,~,~]=supervisor_step(.2,298.15,3.5,.03,1000,0,[7.5 7.5 7.5 7.5],p.SOCswitch,0,0,0,q);
+assert(abs(a-1)<1e-10 && abs(b-.5)<1e-10);checks.anode_parameter_live=true;
+clear supervisor_step;
+[a,~,~,~,~,~,d]=supervisor_step(.2,298.15,3.5,.2,250,0,[7.5 7.5 7.5 7.5],p.SOCswitch,0,0,0,p);
+assert(abs(a-1)<1e-10 && d(5)==5);checks.electrolyte_derate=true;
+checks.passed=true;checks.executed_at=char(datetime('now','TimeZone','UTC'));
+write_json(fullfile(p.root,'verification','revision_regressions.json'),checks);
+end
