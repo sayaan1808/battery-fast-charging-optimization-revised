@@ -1,0 +1,45 @@
+{
+  "title": "Experimental data for \"Development of Experimental Techniques for Parameterization of Multi-scale Lithium-ion Battery Models\"",
+  "creators": [
+    {
+      "name": "Chen, Chang-Hui",
+      "affiliation": "WMG, University of Warwick"
+    },
+    {
+      "name": "Brosa Planella, Ferran",
+      "affiliation": "WMG, University of Warwick",
+      "orcid": "0000-0001-6363-2812"
+    },
+    {
+      "name": "O'Regan, Kieran",
+      "affiliation": "School of Metallurgy and Materials, University of Birmingham",
+      "orcid": "0000-0002-5266-594X"
+    },
+    {
+      "name": "Gastol, Dominika",
+      "affiliation": "School of Metallurgy and Materials, University of Birmingham"
+    },
+    {
+      "name": "Widanage, W. Dhammika",
+      "affiliation": "WMG, University of Warwick"
+    },
+    {
+      "name": "Kendrick, Emma",
+      "affiliation": "School of Metallurgy and Materials, University of Birmingham",
+      "orcid": "0000-0002-4219-964X"
+    }
+  ],
+  "publication_date": "2020-05-15",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.1149/1945-7111/ab9050",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "source": "https://zenodo.org/records/4032561"
+}

@@ -1,0 +1,27 @@
+{
+  "doi": "10.5281/zenodo.4032561",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "source": "https://zenodo.org/records/4032561",
+  "files": [
+    {
+      "file": "LGM50_cell03.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell03.csv/content",
+      "sha256": "fcc13423786d6044f3ec41b1b278fb1d42ff55018666be743243f7c34b1b98cb",
+      "zenodo_checksum": "md5:a09cbd8eff0af55dfe9bc8728fa89908"
+    },
+    {
+      "file": "LGM50_cell04.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell04.csv/content",
+      "sha256": "e1cbb60e79911824d5559f12db8e8ecdd4781d077a45f5b1ecbcf103aa271d9e",
+      "zenodo_checksum": "md5:f17615476283d2e15087165697ff9d7c"
+    },
+    {
+      "file": "LGM50_cell02.csv",
+      "url": "https://zenodo.org/api/records/4032561/files/LGM50_cell02.csv/content",
+      "sha256": "650e7f9ac5217b4db158047e50b6b464100b13f4859002421114edebca629b35",
+      "zenodo_checksum": "md5:0bbf959cbfc367296ec69d7a74d2f5c1"
+    }
+  ]
+}

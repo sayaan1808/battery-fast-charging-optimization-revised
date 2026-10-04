@@ -1,0 +1,13 @@
+workstream,status,evidence
+"SPM understanding","Implemented","Solid diffusion, electrolyte transport, electrode potential and concentration risk indicators; model equations and parameter mapping."
+"Simscape setup","Executed","BatteryFastCharging.slx uses the actual Battery Single Particle block, current source, physical network and probes."
+"Built-in CC-CV baseline","Executed","Actual Battery CC-CV PI block; 20-80% comparison plus a 98% SOC run to demonstrate voltage taper."
+"2-4 stage profiles","Executed","SOC-switched 2, 3 and 4-stage profiles with measured time, voltage, temperature and final SOC."
+"Comparison and recommendation","Completed","Numerical and visual comparison; best evaluated feasible profile and limitations."
+"Optimal control","Executed","25-node direct collocation, independent RK4 replay and guarded Simscape replay; separate full-plant pattern search."
+"Two-state thermal model","Executed","Core thermal mass, surface mass and two thermal resistances; core-temperature feedback."
+"Electrochemical / thermal coupling","Executed","Temperature-dependent reaction rates; explicit diffusion-activation sensitivity case."
+"Parameter fitting / validation","Executed; bounded evidence","Public capacity and OCP; effective diffusion and thermal fit; held-out discharge and charge comparison. No new EIS identification claimed."
+"Degradation / SOH","Executed; illustrative","Six continuous cycles with built-in SEI and reversible / irreversible plating states; lithium-inventory SOH proxy."
+"Adaptive / learning control","Executed; exploratory","Built-in PI and feedback limits; fixed-seed tabular Q-learning with full-plant schedule replay."
+"Registration / submission","Participant action","The package is prepared for review. No external form or forum message has been submitted."
